@@ -20,29 +20,6 @@ jobs:
     
       
       - name: npm dependencies
-        run: npm install
+        run: date
      
-      - name: Install testcafe
-        run: npm install -g testcafe  
       
-      - name: Build Npm package
-        run: npm run build
-        
-      - name: Link Npm
-        run: npm link
-        
-      - name: Run single test
-        run: testcafe "lambdatest:Chrome@74.0:Windows 8" "test/test.js"  
-        
-                
-      - name: Run Parallel test
-        run: testcafe "lambdatest:Chrome@74.0:Windows 8","lambdatest:Chrome@75.0:Windows 10" "test/test.js" 
- 
-         
-      - name: Run Mobile test
-        run: testcafe "lambdatest:Galaxy S8@9:android:isReal" "test/test.js"
-      
-    
-        
-      
-        
